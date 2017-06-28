@@ -1,23 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Ejercicio</title>
-  <link href="assets/css/style.css" rel="stylesheet" type="text/css" />
-  <link href="assets/css/grid.css" rel="stylesheet" type="text/css" />
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <title>SCSS</title>
 </head>
-<body id="contenido">
-  <!-- seccion titulo -->
-  <div class="container">
-    <div class="row" id="title">
-      <h1 class=".col-12">Capitan</h1>
-    </div>
+<body>
+  <div id="header">
+    <h1>Capitan</h1>
   </div>
-  <!-- todo el contenido -->
-  <!-- seccion menu -->
+  <div class="">
     <div class="row">
-      <div class=".col-3" id="menu">
+      <div class="col-3">
         <ul>
           <li>Prework</li>
           <li>Quiz</li>
@@ -25,30 +21,12 @@
           <li>Ejercicio</li>
         </ul>
       </div>
-    </div>
-  </div>
-
-
-  <!-- seccion contenido -->
-    <div class="row">
-      <div class=".col-6">
-        <div id="contenido">
-          <h1 >Ejercicio</h1>
-          <p>Este es el contenedor principal, el objetivo es que todo se vea bien aun cambiando las resoluciones, deberas cambiar los colores y tamaños explotando las variables y funciones de SASS</p>
-          <p>Deberas obtener la lista de asistencia usando la API ubicada en <a href="http://laboratoria.cuadra.co:9339/api/v1/students/">http://laboratoria.cuadra.co:9339/api/v1/students/</a> y agregarle estilos con SASS</p>
-          <h4>Asistencia:</h4>
-          <ol>
-            <li> Andrea   <input type="checkbox"> </li>
-            <li> Maria    <input type="checkbox"> </li>
-            <li> Fernanda <input type="checkbox"> </li>
-          </ol>
-        </div>
+      <div class=" col-6 ejercicio">
+        <h2>Asistencia: </h2>
+        <ol id="asistencia">
+        </ol>
       </div>
-    </div>
-
-  <!-- seccion aside -->
-    <div class="row">
-      <div class=".col-3">
+      <div class="col-3" id="aside">
         <div class="aside">
           <h2>Deberas</h2>
           <p>Crear una funcion para calcular el width % con base en que col es, ej col-1 = 8.33% , </p>
@@ -61,20 +39,15 @@
         </div>
       </div>
     </div>
-
-</div>
-</div>
-
-
-<!-- fin todo el contenido -->
-</div>
-<!-- footer -->
-  <div class="row">
-    <div class=".col-12" id="foot">
-      <p>Cambiar el tamano de la ventana y cambiar tamaño de esto.</p>
-    </div>
   </div>
 
+  <footer>
+    <p class="footer">Cambiar el tamano de la ventana y cambiar tamaño de esto.</p>
+  </footer>
 
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script type="text/javascript" src="assets/js/app.js">
+  </script>
 </body>
+
 </html>

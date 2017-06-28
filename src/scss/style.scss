@@ -1,79 +1,128 @@
-$container-width:100%;
-$container-margin:0;
+@import "grid";
+@import "colors";
+@import "fonts";
 
-$list-color: rgb(43, 43, 43);
-$title-color: rgb(247, 182, 23);
-$subtitle-color: #ffffff ;
-
-$title-font: 16px Tahoma;
-$paragraph-size: 12px Arial;
-$subtitle-font: 14px Helvetica;
-
-
-
-@mixin cell ($padd){
-  border: 1px solid black;
-  padding:($padd);
-  text-align: center;
-}
-
-#contenido{
-  width: $container-width;
-  margin: $container-margin;
-}
-
-#title{
-  color: $subtitle-color;
-  margin: 0 auto;
-  background: $title-color;
-}
-#menu{
-  padding: 15px;
-  overflow-x: auto;
-  border-collapse: collapse;
-  li{
-    background: $list-color;
-    color: $subtitle-color;
+@mixin asistencia (){
+  margin-left: 5%;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.5;
+  &:hover {
+    color: $background-yellow;
   }
 }
 
-#dif{
-  background: $title-color;
-}
-.aside{
-  background: $list-color;
-  color: $subtitle-color;
-  text-align: center;
+
+body,
+html {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  font-family: $font;
 }
 
-#foot{
-  background: $list-color;
-  color: $subtitle-color;
-  text-align: center;
+#header {
+  background: $background-yellow;
+  color: $text-light;
+  height: 100px;
+  display: flex;
+  align-items: center;
+
+  h1 {
+    margin-left: 5%;
+  }
 }
 
-// p{
-//   font: $paragraph-size;
-//   background: $list-color;
-//
-// }
-//
-// h2{
-//   font: $subtitle-font;
-//   color: $subtitle-color;
-//   &:hover{
-//     color: $color-opacidad;
-//     cursor: pointer;
-//     background: $list-color;
-//
-//   }
-// }
-//
-// td{
-//   background: $title-color;
-//   font: $paragraph-size;
-//   &:hover{
-//     color: $color-opacidad;
-//     cursor: pointer;
-//   }
-// }
+ul {
+  color: $text-light;
+  width: 100%;
+  padding: 1%;
+
+  li {
+    list-style: none;
+    background: $backgroud-grey;
+    margin-top: 4%;
+    padding: 2%;
+
+    &:hover {
+      background: $background-yellow;
+    }
+  }
+}
+
+.ejercicio {
+  h1 {
+    text-align: left;
+    margin-bottom: 5%;
+  }
+
+  p {
+    text-align: left;
+    line-height: 1.2;
+  }
+
+  h4 {
+    margin-top: 5%;
+    text-align: left;
+  }
+}
+
+#asistencia {
+  margin-top: 5%;
+
+  li {
+    @include asistencia;
+  }
+}
+
+.l3 {
+  width: col(3);
+}
+
+.l6 {
+  width: col(6);
+}
+
+.aside {
+  background: $backgroud-grey;
+  color: $text-light;
+  padding: $container-padd;
+
+  h2 {
+    font-size: $subtitle-size;
+  }
+
+  p {
+    font-size: $text-size;
+    padding: $container-padd;
+  }
+}
+
+footer {
+  font-size: 0.8em;
+  background: $backgroud-grey;
+  height: 70px;
+  color: $text-light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media only screen and (max-width: 1024px) {
+  .col-3 {
+    width: 33.3333%;
+  }
+
+  .col-6 {
+    width: 66.6666%;
+  }
+
+  #aside {
+    width: 100%;
+  }
+}
+@media only screen and ( max-width: 480px ) {
+  .col-3,
+  .col-6 {
+    width: 100%;
+  }
+}
