@@ -1,20 +1,10 @@
-@import "grid";
 @import "colors";
 @import "fonts";
-
-@mixin asistencia (){
-  margin-left: 5%;
-  text-align: left;
-  font-size: 1em;
-  line-height: 1.5;
-  &:hover {
-    color: $background-yellow;
-  }
-}
+@import "grid";
+@import "mixin";
 
 
-body,
-html {
+body{
   margin: 0;
   padding: 0;
   overflow-x: hidden;
@@ -22,30 +12,26 @@ html {
 }
 
 #header {
-  background: $background-yellow;
-  color: $text-light;
+  background: $color-yellow;
+  color: $text-white;
   height: 100px;
   display: flex;
   align-items: center;
-
-  h1 {
-    margin-left: 5%;
-  }
 }
 
 ul {
-  color: $text-light;
+  color: $text-white;
   width: 100%;
   padding: 1%;
 
   li {
     list-style: none;
-    background: $backgroud-grey;
+    background: $color-grey;
     margin-top: 4%;
     padding: 2%;
 
     &:hover {
-      background: $background-yellow;
+      background: $color-yellow;
     }
   }
 }
@@ -84,8 +70,8 @@ ul {
 }
 
 .aside {
-  background: $backgroud-grey;
-  color: $text-light;
+  background: $color-grey;
+  color: $text-white;
   padding: $container-padd;
 
   h2 {
@@ -100,9 +86,9 @@ ul {
 
 footer {
   font-size: 0.8em;
-  background: $backgroud-grey;
+  background: $color-grey;
   height: 70px;
-  color: $text-light;
+  color: $text-white;
   display: flex;
   align-items: center;
   justify-content: center;

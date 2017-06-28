@@ -1,3 +1,5 @@
+
+// funcion de grid
 @function col($n) {
   @return  100% * $n/12;
 }
